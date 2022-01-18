@@ -1,9 +1,16 @@
 import logging
+import os
+
 from keyboards import *
 # from api_key import API_KEY
 from telegram import Update
 from telegram.ext import Updater, CallbackQueryHandler, CommandHandler, ConversationHandler, \
     CallbackContext, MessageHandler, Filters
+
+from boto.s3.connection import S3Connection
+
+API_KEY = S3Connection(os.environ['API_KEY'])
+
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
