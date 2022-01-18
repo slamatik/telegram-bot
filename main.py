@@ -1,6 +1,6 @@
 import logging
 from keyboards import *
-from api_key import API_KEY
+# from api_key import API_KEY
 from telegram import Update
 from telegram.ext import Updater, CallbackQueryHandler, CommandHandler, ConversationHandler, \
     CallbackContext, MessageHandler, Filters
